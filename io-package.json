@@ -306,6 +306,46 @@
           "uk": "Документація",
           "zh-cn": "Docker 文档"
         }
+      },
+      {
+        "condition": {
+          "operand": "and",
+          "rules": [
+            "oldVersion<3.4.0",
+            "newVersion>=3.4.0"
+          ]
+        },
+        "title": {
+          "en": "Integrated token encryption",
+          "de": "Integrierte Token-Verschlüsselung",
+          "ru": "Встроенное шифрование токенов",
+          "pt": "Criptografia de token integrada",
+          "nl": "Geïntegreerde tokenversleuteling",
+          "fr": "Chiffrement de jeton intégré",
+          "it": "Crittografia integrata del token",
+          "es": "Cifrado de token integrado",
+          "pl": "Zintegrowane szyfrowanie tokenów",
+          "uk": "Інтегроване шифрування токенів",
+          "zh-cn": "集成令牌加密"
+        },
+        "text": {
+          "en": "With this release, even greater attention has been paid to data security, and the values for the Dropbox access token, the Grafana API key, and the InfluxDB token have been encrypted. After the update, these tokens must be re-entered in the Backitup configuration!!",
+          "de": "Mit dieser Version wurde der Datensicherheit noch mehr Aufmerksamkeit gewidmet, und die Werte für das Dropbox-Zugriffstoken, den Grafana-API-Schlüssel und das InfluxDB-Token wurden verschlüsselt. Nach dem Update müssen diese Token in der Backitup-Konfiguration erneut eingegeben werden!",
+          "ru": "В этом релизе еще больше внимания уделено безопасности данных, и значения токена доступа Dropbox, ключа API Grafana и токена InfluxDB были зашифрованы. После обновления эти токены необходимо будет повторно ввести в конфигурацию Backitup!",
+          "pt": "Nesta versão, foi dada ainda mais atenção à segurança dos dados, e os valores do token de acesso do Dropbox, da chave da API do Grafana e do token do InfluxDB foram criptografados. Após a atualização, esses tokens deverão ser reinseridos na configuração do Backitup!",
+          "nl": "Met deze release is er nog meer aandacht besteed aan gegevensbeveiliging. De waarden voor het Dropbox-toegangstoken, de Grafana API-sleutel en het InfluxDB-token zijn versleuteld. Na de update moeten deze tokens opnieuw worden ingevoerd in de Backitup-configuratie!",
+          "fr": "Cette version renforce encore la sécurité des données : les valeurs du jeton d’accès Dropbox, de la clé API Grafana et du jeton InfluxDB sont désormais chiffrées. Après la mise à jour, vous devrez ressaisir ces jetons dans la configuration de Backitup !",
+          "it": "Con questo aggiornamento, è stata prestata ancora maggiore attenzione alla sicurezza dei dati e i valori del token di accesso a Dropbox, della chiave API di Grafana e del token di InfluxDB sono stati crittografati. Dopo l'aggiornamento, questi token dovranno essere reinseriti nella configurazione di Backitup!",
+          "es": "Con esta versión, se ha prestado aún mayor atención a la seguridad de los datos, y los valores del token de acceso de Dropbox, la clave API de Grafana y el token de InfluxDB se han cifrado. Tras la actualización, ¡deberá volver a introducir estos tokens en la configuración de Backitup!",
+          "pl": "W tej wersji jeszcze większą uwagę poświęcono bezpieczeństwu danych, a wartości tokena dostępu Dropbox, klucza API Grafana i tokena InfluxDB zostały zaszyfrowane. Po aktualizacji tokeny te należy ponownie wprowadzić w konfiguracji Backitup!",
+          "uk": "У цьому випуску ще більше уваги приділено безпеці даних, а значення токена доступу Dropbox, ключа Grafana API та токена InfluxDB зашифровано. Після оновлення ці токени необхідно повторно ввести в конфігурацію Backitup!!",
+          "zh-cn": "此次版本更新更加注重数据安全，Dropbox 访问令牌、Grafana API 密钥和 InfluxDB 令牌的值均已加密。更新后，必须在 Backitup 配置中重新输入这些令牌！"
+        },
+        "level": "warn",
+        "buttons": [
+          "agree",
+          "cancel"
+        ]
       }
     ]
   },
@@ -630,6 +670,9 @@
   },
   "encryptedNative": [
     "cifsPassword",
+    "dropboxAccessToken",
+    "grafanaApiKey",
+    "influxDBToken",
     "mySqlPassword",
     "ccuPassword",
     "ftpPassword",
@@ -640,6 +683,9 @@
   ],
   "protectedNative": [
     "cifsPassword",
+    "dropboxAccessToken",
+    "grafanaApiKey",
+    "influxDBToken",
     "mySqlPassword",
     "ccuPassword",
     "ftpPassword",

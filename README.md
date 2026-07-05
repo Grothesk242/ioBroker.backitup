@@ -65,6 +65,7 @@ When you allow iobroker GmbH to collect diagnostic data, then also your installa
 * (simatec) dependencies updated
 * (simatec) Fix Translation
 * (simatec) small Fixes
+* (simatec) Integrated token encryption
 
 ### 3.3.17 (2026-04-14)
 * (simatec) Fix vite Build
