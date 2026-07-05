@@ -5,16 +5,16 @@
     "news": {
       "3.3.17": {
         "en": "Fix vite Build",
-        "de": "Reparieren vite Build",
-        "ru": "Fix vite сборка",
-        "pt": "Corrigir compilação de vite",
-        "nl": "Fix vite Build",
-        "fr": "Correction de la construction de rite",
-        "it": "Fissare vite",
-        "es": "Fix vite Build",
-        "pl": "Fix vite Build",
-        "uk": "Виправлення vite Створити",
-        "zh-cn": "修复 Vite 构建"
+        "de": "Vite-Build reparieren",
+        "ru": "Исправить сборку Vite",
+        "pt": "Corrigir construção de vite",
+        "nl": "Repareer Vite Build",
+        "fr": "Correction de la version vite",
+        "it": "Correzione della build di Vite",
+        "es": "Reparar vite Build",
+        "pl": "Napraw kompilację Vite",
+        "uk": "Виправити збірку vite",
+        "zh-cn": "修复 vite 构建"
       },
       "3.3.16": {
         "en": "Fix Tab Admin",
@@ -163,7 +163,7 @@
     },
     "dependencies": [
       {
-        "js-controller": ">=6.0.11"
+        "js-controller": ">=7.0.7"
       }
     ],
     "globalDependencies": [

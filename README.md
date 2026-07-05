@@ -64,6 +64,7 @@ When you allow iobroker GmbH to collect diagnostic data, then also your installa
 ### **WORK IN PROGRESS**
 * (simatec) dependencies updated
 * (simatec) Fix Translation
+* (simatec) small Fixes
 
 ### 3.3.17 (2026-04-14)
 * (simatec) Fix vite Build
