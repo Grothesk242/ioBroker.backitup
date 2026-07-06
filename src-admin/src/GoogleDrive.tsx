@@ -24,8 +24,8 @@ type GoogleDriveState = ConfigGenericState & {
 class GoogleDrive extends ConfigGeneric<ConfigGenericProps, GoogleDriveState> {
     googleAuthWindow?: WindowProxy | null;
 
-    componentDidMount(): void {
-        super.componentDidMount();
+    async componentDidMount(): Promise<void> {
+        await super.componentDidMount();
         if (window.addEventListener) {
             window.addEventListener('message', this.onMessage as any, false);
         } else {

@@ -5,11 +5,11 @@ import type { BackitupNative } from './Components/types';
 
 class CheckConfigInvisible extends BaseField {
     async componentDidMount(): Promise<void> {
-        super.componentDidMount();
-        if (!this.isConfigFilled((this.props.schema as ConfigItemCustom).adapter)) {
+        await super.componentDidMount();
+        if (!this.isConfigFilled((this.props.schema as ConfigItemCustom).custom?.adapter)) {
             const data = { ...this.props.data };
             const result = await this.fetchConfig(
-                (this.props.schema as ConfigItemCustom).adapter,
+                (this.props.schema as ConfigItemCustom).custom?.adapter,
                 data as BackitupNative,
             );
             if (result.changed) {

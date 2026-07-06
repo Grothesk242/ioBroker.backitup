@@ -109,8 +109,8 @@ class CheckAllConfigInvisible extends BaseField {
         }
     }
 
-    componentDidMount(): void {
-        super.componentDidMount();
+    async componentDidMount(): Promise<void> {
+        await super.componentDidMount();
         if (this.storedAlive) {
             this.checkConfiguration();
         }

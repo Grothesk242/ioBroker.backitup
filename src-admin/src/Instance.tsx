@@ -24,7 +24,7 @@ class Instance extends BaseField<ConfigGenericProps, InstanceState> {
     instanceRead?: string | null;
 
     async componentDidMount(): Promise<void> {
-        super.componentDidMount();
+        await super.componentDidMount();
         const instance = ConfigGeneric.getValue(this.props.data, this.props.attr!);
         const target = ConfigGeneric.getValue(
             this.props.data,
@@ -140,7 +140,9 @@ class Instance extends BaseField<ConfigGenericProps, InstanceState> {
                         style={{ width: '100%', marginRight: 10 }}
                         variant="standard"
                     >
-                        <InputLabel>{I18n.t((this.props.schema as ConfigItemCustomInstance).label as string)}</InputLabel>
+                        <InputLabel>
+                            {I18n.t((this.props.schema as ConfigItemCustomInstance).label as string)}
+                        </InputLabel>
                         <Select
                             variant="standard"
                             value={this.state.instance || '_'}
