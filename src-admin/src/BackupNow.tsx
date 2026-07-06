@@ -194,7 +194,7 @@ class BackupNow extends ConfigGeneric<ConfigGenericProps, BackupNowState> {
     };
 
     async componentDidMount(): Promise<void> {
-        super.componentDidMount();
+        await super.componentDidMount();
         await this.props.oContext.socket.subscribeState(
             `${this.props.oContext.adapterName}.${this.props.oContext.instance}.oneClick.${(this.props.schema as ConfigItemCustomBackupNow).custom.backUpType}`,
             this.onEnabled,

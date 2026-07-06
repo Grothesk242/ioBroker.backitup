@@ -98,7 +98,7 @@ function getIcon(type: string): JSX.Element | null {
     }
     return (
         <img
-            src={ICONS[type] as unknown as string}
+            src={ICONS[type]}
             style={{ width: 24, height: 24, marginRight: 8 }}
             alt={type}
         />
@@ -143,14 +143,17 @@ const GetBackups = (props: GetBackupsProps): JSX.Element => {
     const [expanded, setExpanded] = useState<string[]>([]);
 
     useEffect(() => {
-        let _expanded: string[] | undefined;
-        try {
-            _expanded = JSON.parse(window.localStorage.getItem('BackupExpanded') || '[]');
-        } catch {
-            _expanded = [];
-        }
-        setExpanded(_expanded || []);
-        setBackups(null);
+        setTimeout(() => {
+            let _expanded: string[] | undefined;
+            try {
+                _expanded = JSON.parse(window.localStorage.getItem('BackupExpanded') || '[]');
+            } catch {
+                _expanded = [];
+            }
+            setExpanded(_expanded || []);
+            setBackups(null);
+        }, 0);
+
         void props.socket
             .sendTo(`${props.adapterName}.${props.instance}`, 'list', props.backupSource)
             .then((result: BackupResult) => {

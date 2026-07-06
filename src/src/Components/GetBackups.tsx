@@ -141,14 +141,17 @@ export default function GetBackups(props: GetBackupsProps): React.JSX.Element {
     const [expanded, setExpanded] = useState<string[]>([]);
 
     useEffect(() => {
-        let _expanded: string[];
-        try {
-            _expanded = JSON.parse(window.localStorage.getItem('BackupExpanded') || '[]');
-        } catch {
-            _expanded = [];
-        }
-        setExpanded(_expanded || []);
-        setBackups(null);
+        setTimeout(() => {
+            let _expanded: string[];
+            try {
+                _expanded = JSON.parse(window.localStorage.getItem('BackupExpanded') || '[]');
+            } catch {
+                _expanded = [];
+            }
+            setExpanded(_expanded || []);
+            setBackups(null);
+        }, 0);
+
         void props.socket
             .sendTo(`${props.adapterName}.${props.instance}`, 'list', props.backupSource)
             .then(
